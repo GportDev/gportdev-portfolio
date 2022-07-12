@@ -6,6 +6,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
+  body {
+    background: var(--backgroundGradient);
+    background-repeat: no-repeat;
+    color: #FFF;
+    min-height: 100vh;
+  }
+
   :root {
     /* --COLORS-- */
     --backgroundGradient: linear-gradient(100.14deg, #1A1A1B 24%, #333F44 92.42%) ;
