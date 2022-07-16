@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -10,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--backgroundGradient);
     background-repeat: no-repeat;
     color: #FFF;
+    margin: 0;
     min-height: 100vh;
   }
 
@@ -23,19 +23,22 @@ export const GlobalStyle = createGlobalStyle`
     --lightOrange: #ECB365;
 
     /* --TYPOGRAPHY-- */
-    --h1Desktop: 5.6rem;
-    --h2Desktop: 4.8rem;
-    --h3Desktop: 3.2rem;
-    --h4Deskotp: 2.4rem;
-    --pDesktop: 2rem;
+    --h1Desktop: 3.5rem;
+    --h2Desktop: 3rem;
+    --h3Desktop: 2rem;
+    --h4Deskotp: 1.5rem;
+    --pDesktop: 1.25rem;
 
-    --h1Mobile: 4rem;
-    --h2Mobile: 3.2rem;
-    --h3Mobile: 2.4rem;
-    --h4Deskotp: 2rem;
-    --pMobile: 1.6rem;
+    --h1Mobile: 2rem;
+    --h2Mobile: 1.5rem;
+    --h3Mobile: 1.25rem;
+    --h4Deskotp: 1.05rem;
+    --pMobile: 1rem;
+
     /* --SIZES-- */
+    --sectionSpacer: 5rem;
 
-    --sectionSpacer: 8rem;
+    /* --EFFECTS-- */
+    --simpleShadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
   }
 `

@@ -5,19 +5,39 @@ export const PageContainer = styled.div`
   padding: 0 2rem;
   margin: 0 auto;
 `
+
+/* --- HERO --- */
 export const HeroSection = styled.section`
   display: flex;
+  text-align: center;
   @media(max-width: 800px) {
     flex-direction: column;
+    align-items: center;
   }
 `
 
-export const HeroText = styled.div`
+export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
 `
 
+export const HeroSocialContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+`
+
+export const HeroImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media(max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
 export const HeroImg = styled.img`
-  max-height: 90%;
-  max-height: 90%;
+  max-width: 100%;
 `
