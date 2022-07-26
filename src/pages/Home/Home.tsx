@@ -1,5 +1,6 @@
-import { PageContainer } from "../../Styles/Containers"
-import Hero from "../../templates/Hero/Hero";
+import React from 'react';
+import { PageContainer } from '../../Styles/Containers';
+import Hero from '../../templates/Hero/Hero';
 
 const Home = () => {
   return (

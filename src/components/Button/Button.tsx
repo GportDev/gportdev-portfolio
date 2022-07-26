@@ -1,16 +1,15 @@
-import { ButtonContainer, ButtonElement } from "./styles";
+import React from 'react';
+import { ButtonContainer, ButtonElement } from './styles';
 
 interface IButtonProps {
   Text: string;
-  Variant: "solid" | "outlined";
+  Variant: 'solid' | 'outlined';
 }
 
 const Button = (props: IButtonProps) => {
-  return ( 
+  return (
     <ButtonContainer>
-      <ButtonElement>
-        {props.Text}
-      </ButtonElement>
+      <ButtonElement>{props.Text}</ButtonElement>
     </ButtonContainer>
   );
 };
