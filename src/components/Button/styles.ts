@@ -1,10 +1,9 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-
-`
+`;
 
 export const ButtonElement = styled.button`
   width: 13rem;
@@ -21,11 +20,11 @@ export const ButtonElement = styled.button`
   cursor: pointer;
 
   :hover {
-    font-weight: 600;
-    color: #FFF;
+    font-weight: 700;
+    color: #fff;
     background-color: var(--aquaGreen);
     text-shadow: 0px 0px 8px rgba(256, 256, 256, 0.25);
     box-shadow: var(--simpleShadow), 0px 0px 24px rgba(148, 243, 228, 0.35);
     transition: 0.2s ease;
   }
-`
+`;

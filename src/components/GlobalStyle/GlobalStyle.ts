@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -41,4 +41,4 @@ export const GlobalStyle = createGlobalStyle`
     /* --EFFECTS-- */
     --simpleShadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
   }
-`
+`;
