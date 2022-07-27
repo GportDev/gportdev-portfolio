@@ -3,6 +3,8 @@ import { HeroImg, HeroImgContainer, HeroSection, HeroContent, HeroSocialContent 
 import { PlainText, Subtitle, Title } from '../../Styles/Typography';
 import HeroImage from '../../assets/HeroImage.png';
 import Button from '../../components/Button/Button';
+import { Instagram, Linkdein, LinkIcon, Mail } from '../../Styles/Icons';
+import { IconContext } from 'phosphor-react';
 
 const Hero = () => {
   return (
@@ -16,11 +18,20 @@ const Hero = () => {
         </PlainText>
 
         <Button Text="HIRE ME" Variant="solid" />
-
         <HeroSocialContent>
-          <h2>Social</h2>
-          <h2>Social</h2>
-          <h2>Social</h2>
+          <IconContext.Provider value={{ size: 48, weight: 'regular' }}>
+            <LinkIcon href="https://www.linkedin.com/in/gabriel-porteiro/" target="blanck">
+              <Linkdein />
+            </LinkIcon>
+
+            <LinkIcon href="mailto:gportdev@gmail.com" target="blanck">
+              <Mail />
+            </LinkIcon>
+
+            <LinkIcon href="https://www.instagram.com/gb_porteiro/" target="blanck">
+              <Instagram />
+            </LinkIcon>
+          </IconContext.Provider>
         </HeroSocialContent>
       </HeroContent>
 
