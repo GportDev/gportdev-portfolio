@@ -1,11 +1,11 @@
 import React from 'react';
+import { BaseSection } from '../../Styles/Containers';
 import {
-  HeroImg,
-  HeroImgContainer,
-  HeroSection,
   HeroContent,
   HeroSocialContent,
-} from '../../Styles/Containers';
+  HeroImgContainer,
+  HeroImg,
+} from './styles';
 import { PlainText, Subtitle, Title } from '../../Styles/Typography';
 import HeroImage from '../../assets/HeroImage.png';
 import Button from '../../components/Button/Button';
@@ -14,7 +14,7 @@ import { IconContext } from 'phosphor-react';
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <BaseSection>
       <HeroContent>
         <Title>GABRIEL PORTEIRO</Title>
         <Subtitle>FULL-STACK WEB DEVELOPER</Subtitle>
@@ -50,7 +50,7 @@ const Hero = () => {
       <HeroImgContainer>
         <HeroImg src={HeroImage} />
       </HeroImgContainer>
-    </HeroSection>
+    </BaseSection>
   );
 };
 
