@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Title = styled.h1`
   font-size: var(--h1Desktop);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   @media (max-width: 800px) {
     font-size: var(--h1Mobile);
     margin-bottom: 0.5rem;
