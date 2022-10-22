@@ -1,14 +1,38 @@
 import React from 'react';
-import { HeaderContainer, HeaderLogo } from './styles';
+import {
+  HeaderContainer,
+  HeaderLogo,
+  MenuHamb,
+  HambLink,
+  Menu,
+  MenuLinks,
+  MenuLink,
+} from './styles';
 
-import Logo from '../../assets/Logo_quadrado.png';
-import { MenuHamb } from '../../Styles/Icons';
+import Logo from '../../assets/TextLogo.png';
+import HambMenu from '../../assets/HambMenu.png';
 
 const Header = () => {
+  const links = ['Home', 'Repositories', 'Summaries', 'Articles'];
+
   return (
     <HeaderContainer>
       <HeaderLogo src={Logo} />
-      <MenuHamb size="48" weight="regular" />
+      {screen.width >= 800 ? (
+        <Menu>
+          <MenuLinks>
+            {links.map((link) => (
+              <MenuLink href={`#${link}`} key={link.length}>
+                {link}
+              </MenuLink>
+            ))}
+          </MenuLinks>
+        </Menu>
+      ) : (
+        <HambLink href="#">
+          <MenuHamb src={HambMenu} />
+        </HambLink>
+      )}
     </HeaderContainer>
   );
 };
