@@ -6,6 +6,7 @@ import {
   HeroImgContainer,
   HeroImg,
 } from './styles';
+
 import { PlainText, Subtitle, Title } from '../../Styles/Typography';
 import HeroImage from '../../assets/HeroImage.png';
 import Button from '../../components/Button/Button';
