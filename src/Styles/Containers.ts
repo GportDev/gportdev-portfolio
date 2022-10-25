@@ -5,7 +5,6 @@ export const PageContainer = styled.div`
   padding: 0 2rem;
   margin: 0 auto;
   gap: 7rem;
-  border: 1px solid white;
 `;
 
 export const BaseSection = styled.section`

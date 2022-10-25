@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  position: relative;
 `;
 
 export const HeaderLogo = styled.img`
@@ -29,14 +29,13 @@ export const MenuLink = styled.a`
   text-decoration: none;
   color: #FFF;
   font-size: 1.25rem;
-`;
-
-export const HambLink = styled.a`
-  text-decoration: none;
+  :hover {
+    color: var(--aquaGreen);
+    filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
+    transition: 0.2s ease;
+  }
 `;
 
 export const MenuHamb = styled.img`
-  @media(max-width: 800px) {
-    max-height: 32px;
-  }
+  height: 24px;
 `;
