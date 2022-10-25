@@ -17,8 +17,6 @@ export const HeaderLogo = styled.img`
   }
 `;
 
-export const Menu = styled.nav``;
-
 export const MenuLinks = styled.ul`
   display: flex;
   gap: 1.5rem;

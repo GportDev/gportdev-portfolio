@@ -4,10 +4,13 @@ import { HeroContent, HeroSocialContent } from './styles';
 
 import { PlainText, Subtitle, Title } from '../../Styles/Typography';
 
-import { Github, Medium, LinkedIn, LinkIcon, Mail } from '../../Styles/Icons';
+import { Github, Medium, LinkedIn, LinkIcon, Mail, DownChevron } from '../../Styles/Icons';
 import { IconContext } from 'phosphor-react';
 
 const Hero = () => {
+  let iconSize = 0;
+  screen.width >= 800 ? (iconSize = 64) : (iconSize = 48);
+
   return (
     <BaseSection>
       <HeroContent>
@@ -19,7 +22,7 @@ const Hero = () => {
         </PlainText>
 
         <HeroSocialContent>
-          <IconContext.Provider value={{ size: 48, weight: 'regular' }}>
+          <IconContext.Provider value={{ size: iconSize, weight: 'regular' }}>
             <LinkIcon href="https://github.com/GportDev" target="blank">
               <Github />
             </LinkIcon>
@@ -40,6 +43,7 @@ const Hero = () => {
             </LinkIcon>
           </IconContext.Provider>
         </HeroSocialContent>
+        <DownChevron size={124} />
       </HeroContent>
     </BaseSection>
   );

@@ -4,6 +4,7 @@ import {
   EnvelopeSimple,
   GithubLogo,
   MediumLogo,
+  CaretDoubleDown,
 } from 'phosphor-react';
 
 export const LinkIcon = styled.a`
@@ -47,5 +48,23 @@ export const Medium = styled(MediumLogo)`
     color: rgb(202, 242, 256);
     filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
     transition: 0.2s ease;
+  }
+`;
+
+export const DownChevron = styled(CaretDoubleDown)`
+  color: rgb(202, 242, 256);
+  filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
+  margin: 4rem;
+
+  @keyframes moveY {
+    0% {transform: translateY(64px);}
+    50% {transform: translateY(0);}
+    100% {transform: translateY(64px);}
+  }
+
+  animation: moveY 1.5s infinite ease-in-out;
+
+  @media (max-width: 800px) {
+    margin-top: 2rem;
   }
 `;

@@ -1,14 +1,9 @@
 import { useState } from 'react';
-import {
-  HeaderContainer,
-  HeaderLogo,
-  MenuHamb,
-  MenuLink,
-} from '../Header/styles';
+import { HeaderContainer, HeaderLogo, MenuHamb, MenuLink } from '../styles';
 import { Container } from './styles';
 
-import HambMenu from '../../assets/HambMenu.png';
-import Logo from '../../assets/TextLogo.png';
+import HambMenu from '../../../assets/HambMenu.png';
+import Logo from '../../../assets/TextLogo.png';
 
 export interface ContainerProps {
   isVisible?: boolean;
