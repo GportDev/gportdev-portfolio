@@ -17,7 +17,6 @@ const Repos = () => {
   const { data: repositories } = useGet<Repository[]>(
     'https://api.github.com/users/GportDev/repos',
   );
-  console.log(repositories);
 
   return (
     <ColumnBaseSection>
