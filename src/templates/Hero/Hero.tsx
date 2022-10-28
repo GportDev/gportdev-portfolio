@@ -1,10 +1,16 @@
 import React from 'react';
-import { BaseSection } from '../../Styles/Containers';
+import { BaseSection } from '../../styles/Containers';
 import { HeroContent, HeroSocialContent } from './styles';
+import { PlainText, Subtitle, Title } from '../../styles/Typography';
 
-import { PlainText, Subtitle, Title } from '../../Styles/Typography';
-
-import { Github, Medium, LinkedIn, LinkIcon, Mail, DownChevron } from '../../Styles/Icons';
+import {
+  Github,
+  Medium,
+  LinkedIn,
+  LinkIcon,
+  Mail,
+  DownChevron,
+} from '../../styles/Icons';
 import { IconContext } from 'phosphor-react';
 
 const Hero = () => {

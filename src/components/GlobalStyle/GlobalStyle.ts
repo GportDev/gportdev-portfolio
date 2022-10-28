@@ -3,10 +3,17 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   html {
     font-family: 'JetBrainsMono', monospace;
+    min-height: 100vh;
+    width: 100%;
   }
 
   body {
@@ -14,7 +21,11 @@ export const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     color: #FFF;
     margin: 0;
-    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   :root {

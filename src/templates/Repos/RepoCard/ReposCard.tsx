@@ -1,34 +1,51 @@
 import React from 'react';
-import { Subtitle, CardText } from '../../../Styles/Typography';
+import JS from '../../../assets/icons/javascript-icon.svg';
 import {
   ArrowIcon,
   CardContainer,
   CardFooter,
   CardHeader,
+  CardLink,
+  DevIcon,
   DevIconsContainer,
   GitImg,
 } from './styles';
 
-const RepoCard = () => {
+interface RepoCardProps {
+  name: string; //name
+  description: string; //description
+  url: string; //html_url
+  language: string; //language
+}
+
+function handleName(name: string) {
+  const convertedName = name
+    .toUpperCase()
+    .replaceAll('-', ' ')
+    .replaceAll('_', ' ');
+
+  return convertedName;
+}
+
+const RepoCard = ({ name, description, url, language }: RepoCardProps) => {
   return (
-    <CardContainer>
-      <CardHeader>
-        <Subtitle>NLW-2022</Subtitle>
-        <GitImg />
-      </CardHeader>
-      <CardText>
-        Widget de envio de feedbacks para reutilizar em qualquer site.
-      </CardText>
-      <CardFooter>
-        <DevIconsContainer>
-          <p>icon1</p>
-          <p>icon2</p>
-          <p>icon3</p>
-          <p>icon4</p>
-        </DevIconsContainer>
-        <ArrowIcon size={40} />
-      </CardFooter>
-    </CardContainer>
+    <CardLink href={url} target="blank">
+      <CardContainer>
+        <CardHeader>
+          <h3>{handleName(name)}</h3>
+          <GitImg
+            src={'https://avatars.githubusercontent.com/u/71458971?v=4'}
+          />
+        </CardHeader>
+        <p>{description}</p>
+        <CardFooter>
+          <DevIconsContainer>
+            <DevIcon src={JS} />
+          </DevIconsContainer>
+          <ArrowIcon size={40} />
+        </CardFooter>
+      </CardContainer>
+    </CardLink>
   );
 };
 

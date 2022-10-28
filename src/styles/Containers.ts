@@ -3,8 +3,11 @@ import styled from 'styled-components';
 export const PageContainer = styled.div`
   max-width: 1170px;
   padding: 0 2rem;
-  margin: 0 auto;
   gap: 7rem;
+  margin: 6rem 0;
+  @media (max-width: 800px) {
+    margin: 3rem 0;
+  }
 `;
 
 export const BaseSection = styled.section`

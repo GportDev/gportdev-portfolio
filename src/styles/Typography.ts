@@ -37,7 +37,3 @@ export const PlainText = styled.p`
     font-size: var(--pMobile);
   }
 `;
-
-export const CardText = styled(PlainText)`
-  margin: 0 auto;
-`;
