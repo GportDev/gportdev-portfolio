@@ -1,5 +1,6 @@
 import React from 'react';
-import JS from '../../../assets/icons/javascript-icon.svg';
+import { icons } from '../../../utils/icons';
+
 import {
   ArrowIcon,
   CardContainer,
@@ -11,13 +12,6 @@ import {
   GitImg,
 } from './styles';
 
-interface RepoCardProps {
-  name: string; //name
-  description: string; //description
-  url: string; //html_url
-  language: string; //language
-}
-
 function handleName(name: string) {
   const convertedName = name
     .toUpperCase()
@@ -27,7 +21,15 @@ function handleName(name: string) {
   return convertedName;
 }
 
+interface RepoCardProps {
+  name: string; //name
+  description: string; //description
+  url: string; //html_url
+  language: string; //language
+}
+
 const RepoCard = ({ name, description, url, language }: RepoCardProps) => {
+  console.log(name, language);
   return (
     <CardLink href={url} target="blank">
       <CardContainer>
@@ -40,7 +42,7 @@ const RepoCard = ({ name, description, url, language }: RepoCardProps) => {
         <p>{description}</p>
         <CardFooter>
           <DevIconsContainer>
-            <DevIcon src={JS} />
+            <DevIcon src={icons.get(language)} />
           </DevIconsContainer>
           <ArrowIcon size={40} />
         </CardFooter>
