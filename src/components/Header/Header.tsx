@@ -1,15 +1,31 @@
 import React from 'react';
-import { HeaderContainer, HeaderLogo } from './styles';
+import { HeaderContainer, HeaderLogo, MenuLinks, MenuLink } from './styles';
+import { MobileMenu } from './MobileMenu/MobileMenu';
 
-import Logo from '../../assets/Logo_quadrado.png';
-import { MenuHamb } from '../../Styles/Icons';
+import Logo from '../../assets/TextLogo.png';
 
 const Header = () => {
+  const links = ['Home', 'Repositories', 'Summaries', 'Articles'];
+
   return (
-    <HeaderContainer>
-      <HeaderLogo src={Logo} />
-      <MenuHamb size="48" weight="regular" />
-    </HeaderContainer>
+    <>
+      {screen.width >= 800 ? (
+        <HeaderContainer>
+          <HeaderLogo src={Logo} />
+          <nav>
+            <MenuLinks>
+              {links.map((link) => (
+                <MenuLink href={`#${link}`} key={link.length}>
+                  {link}
+                </MenuLink>
+              ))}
+            </MenuLinks>
+          </nav>
+        </HeaderContainer>
+      ) : (
+        <MobileMenu />
+      )}
+    </>
   );
 };
 

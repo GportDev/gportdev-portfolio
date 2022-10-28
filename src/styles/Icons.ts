@@ -1,13 +1,19 @@
 import styled from 'styled-components';
-import { LinkedinLogo, EnvelopeSimple, InstagramLogo, List } from 'phosphor-react';
+import {
+  LinkedinLogo,
+  EnvelopeSimple,
+  GithubLogo,
+  MediumLogo,
+  CaretDoubleDown,
+} from 'phosphor-react';
 
 export const LinkIcon = styled.a`
   text-decoration: none;
 `;
 
-export const Linkdein = styled(LinkedinLogo)`
+export const LinkedIn = styled(LinkedinLogo)`
   cursor: pointer;
-  color: var(--lightBlue);
+  color: var(--aquaGreen);
   :hover {
     color: rgb(202, 242, 256);
     filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
@@ -17,7 +23,7 @@ export const Linkdein = styled(LinkedinLogo)`
 
 export const Mail = styled(EnvelopeSimple)`
   cursor: pointer;
-  color: var(--lightBlue);
+  color: var(--aquaGreen);
   :hover {
     color: rgb(202, 242, 256);
     filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
@@ -25,9 +31,9 @@ export const Mail = styled(EnvelopeSimple)`
   }
 `;
 
-export const Instagram = styled(InstagramLogo)`
+export const Github = styled(GithubLogo)`
   cursor: pointer;
-  color: var(--lightBlue);
+  color: var(--aquaGreen);
   :hover {
     color: rgb(202, 242, 256);
     filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
@@ -35,12 +41,30 @@ export const Instagram = styled(InstagramLogo)`
   }
 `;
 
-export const MenuHamb = styled(List)`
+export const Medium = styled(MediumLogo)`
   cursor: pointer;
-  color: var(--lightBlue);
+  color: var(--aquaGreen);
   :hover {
     color: rgb(202, 242, 256);
     filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
     transition: 0.2s ease;
+  }
+`;
+
+export const DownChevron = styled(CaretDoubleDown)`
+  color: rgb(202, 242, 256);
+  filter: drop-shadow(0px 0px 16px rgba(148, 243, 228, 0.85));
+  margin: 4rem;
+
+  @keyframes moveY {
+    0% {transform: translateY(64px);}
+    50% {transform: translateY(0);}
+    100% {transform: translateY(64px);}
+  }
+
+  animation: moveY 1.5s infinite ease-in-out;
+
+  @media (max-width: 800px) {
+    margin-top: 2rem;
   }
 `;

@@ -1,57 +1,57 @@
 import React from 'react';
-import {
-  HeroImg,
-  HeroImgContainer,
-  HeroSection,
-  HeroContent,
-  HeroSocialContent,
-} from '../../Styles/Containers';
+import { BaseSection } from '../../styles/Containers';
+import { HeroContent, HeroSocialContent } from './styles';
+import { PlainText, Subtitle, Title } from '../../styles/Typography';
 
-import { PlainText, Subtitle, Title } from '../../Styles/Typography';
-import HeroImage from '../../assets/HeroImage.png';
-import Button from '../../components/Button/Button';
-import { Instagram, Linkdein, LinkIcon, Mail } from '../../Styles/Icons';
+import {
+  Github,
+  Medium,
+  LinkedIn,
+  LinkIcon,
+  Mail,
+  DownChevron,
+} from '../../styles/Icons';
 import { IconContext } from 'phosphor-react';
 
 const Hero = () => {
+  let iconSize = 0;
+  screen.width >= 800 ? (iconSize = 64) : (iconSize = 48);
+
   return (
-    <HeroSection>
+    <BaseSection>
       <HeroContent>
         <Title>GABRIEL PORTEIRO</Title>
         <Subtitle>FULL-STACK WEB DEVELOPER</Subtitle>
         <PlainText>
-          Hello, I’m a Brazilian guy that’s love tecnology and pretend to
+          Hello, I’m a Brazilian guy that loves technology and pretend to
           develop applications that will change realities.
         </PlainText>
 
-        <Button Text="HIRE ME" Variant="solid" />
         <HeroSocialContent>
-          <IconContext.Provider value={{ size: 48, weight: 'regular' }}>
-            <LinkIcon
-              href="https://www.linkedin.com/in/gabriel-porteiro/"
-              target="blanck"
-            >
-              <Linkdein />
+          <IconContext.Provider value={{ size: iconSize, weight: 'regular' }}>
+            <LinkIcon href="https://github.com/GportDev" target="blank">
+              <Github />
             </LinkIcon>
 
-            <LinkIcon href="mailto:gportdev@gmail.com" target="blanck">
+            <LinkIcon href="mailto:gportdev@gmail.com" target="blank">
               <Mail />
             </LinkIcon>
 
             <LinkIcon
-              href="https://www.instagram.com/gb_porteiro/"
-              target="blanck"
+              href="https://www.linkedin.com/in/gabriel-porteiro/"
+              target="blank"
             >
-              <Instagram />
+              <LinkedIn />
+            </LinkIcon>
+
+            <LinkIcon href="https://medium.com/@gportdev" target="blank">
+              <Medium />
             </LinkIcon>
           </IconContext.Provider>
         </HeroSocialContent>
+        <DownChevron size={124} />
       </HeroContent>
-
-      <HeroImgContainer>
-        <HeroImg src={HeroImage} />
-      </HeroImgContainer>
-    </HeroSection>
+    </BaseSection>
   );
 };
 
