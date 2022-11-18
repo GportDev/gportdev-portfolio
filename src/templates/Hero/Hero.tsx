@@ -23,8 +23,8 @@ const Hero = () => {
         <Title>GABRIEL PORTEIRO</Title>
         <Subtitle>FULL-STACK WEB DEVELOPER</Subtitle>
         <PlainText>
-          Hello, I’m a Brazilian guy that loves technology and pretend to
-          develop applications that will change realities.
+          Hello, I’m a Brazilian guy that loves technology and dream of
+          developing applications that will change realities.
         </PlainText>
 
         <HeroSocialContent>
