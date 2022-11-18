@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Aws from '../assets/icons/aws-icon.svg';
 import Css from '../assets/icons/css-icon.svg';
 import Docker from '../assets/icons/docker-icon.svg';

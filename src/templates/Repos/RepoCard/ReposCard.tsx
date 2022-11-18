@@ -29,7 +29,6 @@ interface RepoCardProps {
 }
 
 const RepoCard = ({ name, description, url, language }: RepoCardProps) => {
-  console.log(name, language);
   return (
     <CardLink href={url} target="blank">
       <CardContainer>
